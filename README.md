@@ -122,6 +122,7 @@ bash ~/.openclaw/workspace/scripts/self-evolution-system.sh
 
 - [完整部署指南](docs/deploy-guide.md) - 详细部署说明
 - [系统架构说明](docs/architecture.md) - 架构设计
+- [数据采集模块](docs/scrapling-integration.md) - Scrapling集成
 - [API 文档](docs/api.md) - API参考
 - [示例代码](examples/) - 使用示例
 

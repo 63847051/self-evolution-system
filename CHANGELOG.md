@@ -4,6 +4,21 @@
 
 ---
 
+## [1.0.1] - 2026-03-08
+
+### ✨ 新增功能
+
+- ✅ 集成Scrapling数据采集模块
+- ✅ 添加数据采集文档
+- ✅ 添加workflow-scraper.py示例
+
+#### 文档更新
+
+- ✅ docs/scrapling-integration.md - Scrapling集成文档
+- ✅ examples/workflow-scraper.py - 数据采集助手
+
+---
+
 ## [1.0.0] - 2026-03-08
 
 ### 🎉 首次发布
