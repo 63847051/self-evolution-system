@@ -1,9 +1,9 @@
-# 🧬 自我进化系统 v2.0
+# 🧬 自我进化系统 v3.0
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.2.26-orange.svg)](https://github.com/openclaw/openclaw)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![Version](https://img.shields.io/badge/version-2.0-brightgreen.svg)](https://github.com/63847051/self-evolution-system)
+[![Version](https://img.shields.io/badge/version-3.0-brightgreen.svg)](https://github.com/63847051/self-evolution-system)
 
 让您的 OpenClaw Agent 拥有自动进化能力
 
@@ -13,38 +13,53 @@
 
 ## 🎯 简介
 
-**自我进化系统 v2.0** 是一个整合了 PAI 学习、超级进化大脑、6 层防护、memu-engine 和错误模式分析的统一系统，让您的 Agent 能够：
+**自我进化系统 v3.0** 是一个整合了 PAI 学习、超级进化大脑、6 层防护、memu-engine、错误模式分析和**四步自我改进循环**的统一系统，让您的 Agent 能够：
 
 - 🔍 **自动检测错误** - 实时监控系统状态
 - 🧠 **自动学习改进** - 从每次错误中学习
 - 🔧 **自动修复问题** - 安全问题自动修复
 - 💾 **自动积累知识** - 知识永久存储
 - 🛡️ **自动预防未来** - L7配置验证层
-- 📊 **自动分析模式** - 识别重复错误模式 ⭐ v2.0新增
-- 📝 **自动生成报告** - 完整的进化报告 ⭐ v2.0新增
+- 📊 **自动分析模式** - 识别重复错误模式
+- 📝 **自动生成报告** - 完整的进化报告
+- 🔄 **四步自我改进** - Reflect → Criticize → Learn → Organize ⭐ v3.0新增
 
 ---
 
-## ✨ v2.0 新特性
+## ✨ v3.0 新特性
 
-### 🎯 错误模式分析
-- 自动分析历史错误
-- 识别重复模式
-- 提取根本原因
+### 🎯 四步自我改进循环 ⭐ 核心更新
+
+基于 ivangdavila/self-improving 的核心思想，v3.0 引入了完整的四步自我改进循环：
+
+1. **Reflect（自我反思）** - 评估任务执行质量
+2. **Criticize（自我批评）** - 主动找出问题和错误
+3. **Learn（提取模式）** - 从错误中学习可复用模式
+4. **Organize（组织记忆）** - 自组织知识库
+
+### 🧠 自我批评机制 ⭐⭐⭐⭐⭐
+
+- 系统化的自我批评流程
+- 自动识别问题
 - 生成改进建议
+- 永久记录所有批评
 
-### 📝 自动错误记录
-- 检测最近10分钟错误
-- 自动记录到文件
-- 准备PAI分析
+### 🗂️ 自组织记忆系统 ⭐⭐⭐⭐⭐
+
+- 按主题分类（by-topic）
+- 按严重程度分类（by-severity: high/medium/low）
+- 按频率排序（by-frequency: high/medium/low）
+- 自动生成记忆索引
 
 ### 📊 增强进化报告
+
 - 系统状态概览
 - 最佳实践总结
 - 待办事项清单
 - 完整的进化历程
 
 ### 🔧 L7配置验证增强
+
 - API Key格式验证
 - Provider配置检查
 - 自动修复建议
@@ -55,13 +70,13 @@
 
 ### 完全自动化
 - 每次心跳自动运行，无需人工干预
-- 8步完整进化流程（v1.0: 6步）
+- 8步进化流程 + 4步自我改进循环
 - 零配置，开箱即用
 
-### 协同进化
-- 5个独立系统协同工作（v1.0: 4个）
-- 数据在系统间自由流动
-- 1+1+1+1+1 > 5 的效果
+### 双循环进化
+- **外循环**: 8步进化流程（v2.0）
+- **内循环**: 4步自我改进（v3.0新增）
+- 协同工作，持续优化
 
 ### 预防为主
 - L7 配置验证层预防配置错误
@@ -72,7 +87,8 @@
 - 从每次错误中学习
 - 积累最佳实践
 - 生成进化报告
-- 分析错误模式 ⭐ v2.0
+- 分析错误模式
+- **自我批评和反思** ⭐ v3.0
 
 ### 自我修复
 - 安全错误自动修复
@@ -103,15 +119,11 @@ chmod +x self-evolution-system.sh
 git clone https://github.com/63847051/self-evolution-system.git
 cd self-evolution-system
 
-# 复制脚本
-cp self-evolution-system.sh /root/.openclaw/workspace/scripts/
-cp l7-config-validation.sh /root/.openclaw/workspace/scripts/
-cp analyze-error-patterns.sh /root/.openclaw/workspace/scripts/
-
-# 添加执行权限
+# 复制所有脚本
+cp *.sh /root/.openclaw/workspace/scripts/
 chmod +x /root/.openclaw/workspace/scripts/*.sh
 
-# 运行
+# 运行v3.0
 bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
 ```
 
@@ -119,13 +131,26 @@ bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
 
 ## 🔧 使用方法
 
-### 1. 手动运行
+### 1. 手动运行进化系统
 
 ```bash
 bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
 ```
 
-### 2. 添加到心跳
+### 2. 运行四步自我改进循环 ⭐ v3.0新增
+
+```bash
+# 方式1: 完整的四步循环
+bash /root/.openclaw/workspace/scripts/ses-post-task-eval-v3.sh
+
+# 方式2: 单独使用自我批评模块
+bash /root/.openclaw/workspace/scripts/self-critique-module.sh "任务描述"
+
+# 方式3: 单独运行自组织记忆
+bash /root/.openclaw/workspace/scripts/auto-organize-memory.sh
+```
+
+### 3. 添加到心跳
 
 在 `HEARTBEAT.md` 中添加：
 
@@ -136,48 +161,62 @@ bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
 ```bash
 bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
 ```
+
+## 🔄 四步自我改进循环 ⭐ v3.0核心
+
 ```
-
-### 3. 定时运行
-
-```bash
-# 添加到 crontab
-crontab -e
-
-# 每小时运行一次
-0 * * * * bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
+【任务完成】
+    ↓
+【阶段1: 自我反思 (Reflect)】
+    ├→ 评估任务分配
+    ├→ 评估API选择
+    ├→ 评估透明化
+    ├→ 评估直接答案
+    └→ 评估验证
+    ↓
+【阶段2: 自我批评 (Criticize)】
+    ├→ 识别问题
+    ├→ 分析原因
+    └→ 生成建议
+    ↓
+【阶段3: 提取模式 (Learn)】
+    ├→ 提取错误模式
+    ├→ 提取最佳实践
+    └→ 生成可复用规则
+    ↓
+【阶段4: 组织记忆 (Organize)】
+    ├→ 按主题分类
+    ├→ 按严重程度分类
+    ├→ 按频率排序
+    └→ 生成索引
+    ↓
+【永久改进】
 ```
 
 ---
 
-## 📋 进化流程
+## 📋 v3.0 完整流程
 
-### v2.0 完整流程（8步）
+### 外循环：8步进化流程
 
 ```
 1️⃣ L7配置验证
-   └─ 预防配置错误
-
 2️⃣ 6层防护检测
-   └─ 保护系统运行
-
-3️⃣ 检查最近错误 ⭐新增
-   └─ 自动记录错误
-
+3️⃣ 检查最近错误
 4️⃣ PAI深度学习
-   └─ 分析错误模式
-
 5️⃣ 超级大脑进化
-   └─ 决策改进方案
-
-6️⃣ 错误模式分析 ⭐新增
-   └─ 提取最佳实践
-
+6️⃣ 错误模式分析
 7️⃣ memu-engine存储
-   └─ 永久保存知识
+8️⃣ 生成进化报告
+```
 
-8️⃣ 生成进化报告 ⭐新增
-   └─ 总结进化成果
+### 内循环：4步自我改进 ⭐ v3.0新增
+
+```
+1️⃣ 自我反思 (Reflect)
+2️⃣ 自我批评 (Criticize)
+3️⃣ 提取模式 (Learn)
+4️⃣ 组织记忆 (Organize)
 ```
 
 ---
@@ -186,39 +225,88 @@ crontab -e
 
 - [部署指南](docs/deploy-guide.md)
 - [架构说明](docs/architecture.md)
-- [工作流程优化](docs/workflow-optimization.md) ⭐ v2.0新增
-- [错误模式分析](docs/error-pattern-analysis.md) ⭐ v2.0新增
+- [工作流程优化](docs/workflow-optimization.md)
+- [错误模式分析](docs/error-pattern-analysis.md)
+- [v3.0集成报告](docs/v3-integration-report.md) ⭐ v3.0新增
 - [使用示例](examples/usage-examples.md)
 
 ---
 
-## 🆕 v2.0 更新内容
+## 🆕 v3.0 更新内容
 
-### 新增功能
-- ✅ 错误模式分析（步骤6）
+### 核心更新 ⭐⭐⭐⭐⭐
+
+#### 四步自我改进循环
+基于 ivangdavila/self-improving 的核心思想：
+
+1. **自我批评模块** (`self-critique-module.sh`)
+   - 反思任务执行
+   - 批评找出问题
+   - 提取学习模式
+   - 组织知识记忆
+
+2. **自组织记忆系统** (`auto-organize-memory.sh`)
+   - 按主题分类
+   - 按严重程度分类
+   - 按频率排序
+   - 生成记忆索引
+
+3. **增强版任务后评估** (`ses-post-task-eval-v3.sh`)
+   - 集成四步循环
+   - 系统化自我批评
+   - 自动模式提取
+   - 自组织记忆
+
+### 功能对比
+
+| 功能 | v2.0 | v3.0 | 提升 |
+|------|------|------|------|
+| **进化流程** | 8步 | 8步 + 4步 | 🔄 双循环 |
+| **自我批评** | ❌ | ✅ 系统化 | 🆕 |
+| **记忆组织** | 手动 | 自动 | 🤖 |
+| **模式提取** | 无 | 自动 | 🧠 |
+| **反思评分** | 简单 | 完整 | 📊 |
+
+---
+
+## 📊 版本历史
+
+### [3.0.0] - 2026-03-08 🎉 重大更新
+
+#### 核心更新
+- ✅ 集成四步自我改进循环（基于ivangdavila/self-improving）
+- ✅ 自我批评机制
+- ✅ 自组织记忆系统
+- ✅ 增强版任务后评估
+
+#### 新增脚本
+- ✅ `self-critique-module.sh` - 自我批评模块
+- ✅ `auto-organize-memory.sh` - 自组织记忆系统
+- ✅ `ses-post-task-eval-v3.sh` - v3.0任务后评估
+
+#### 新增文档
+- ✅ `docs/v3-integration-report.md` - v3.0集成报告
+
+### [2.0.0] - 2026-03-08
+
+#### 新增功能
+- ✅ 错误模式分析系统（步骤6）
 - ✅ 自动错误记录（步骤3）
 - ✅ 增强进化报告（步骤8）
 
-### 改进功能
-- ✅ L7配置验证（v1.1）
-- ✅ 错误检测增强
-- ✅ PAI学习改进
+### [1.0.0] - 2026-03-08
 
-### 新增文档
-- ✅ 工作流程优化指南
-- ✅ 错误模式分析报告
-- ✅ 最佳实践文档
-
-### 性能提升
-- 📈 功能增加：6步 → 8步（+33%）
-- 📈 代码增加：5.4KB → 8.4KB（+55%）
-- 📈 智能提升：检测 → 分析
+#### 首次发布
+- ✅ 整合PAI学习、超级进化大脑、6层防护、memu-engine
+- ✅ L7配置验证层
+- ✅ 完整的6步进化流程
 
 ---
 
 ## 🔗 相关项目
 
 - [OpenClaw](https://github.com/openclaw/openclaw) - AI Agent框架
+- [ivangdavila/self-improving](https://clawhub.ai/ivangdavila/self-improving) - 四步自我改进循环灵感来源
 - [memu-engine](https://github.com/yourusername/memu-engine) - 记忆引擎
 - [PAI Learning](https://github.com/yourusername/pai-learning) - 学习系统
 
@@ -249,4 +337,4 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 ---
 
-**v2.0 - 让AI Agent真正实现自我进化！** 🧬✨
+**v3.0 - 双循环进化，让AI Agent真正实现自我改进！** 🧬✨
