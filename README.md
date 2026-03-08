@@ -1,205 +1,252 @@
-# 🧬 自自我进化系统
+# 🧬 自我进化系统 v2.0
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-2026.2.26-orange.svg)](https://github.com/openclaw/openclaw)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
+[![Version](https://img.shields.io/badge/version-2.0-brightgreen.svg)](https://github.com/63847051/self-evolution-system)
 
 让您的 OpenClaw Agent 拥有自动进化能力
 
-[English](README.md) | [简体中文](README_CN.md)
+[English](README_EN.md) | [简体中文](README_CN.md)
 
 ---
 
 ## 🎯 简介
 
-**自我进化系统** 是一个整合了 PAI 学习、超级进化大脑、 6 层防护和 memu-engine 的统一系统，让您的 Agent 能够：
+**自我进化系统 v2.0** 是一个整合了 PAI 学习、超级进化大脑、6 层防护、memu-engine 和错误模式分析的统一系统，让您的 Agent 能够：
 
 - 🔍 **自动检测错误** - 实时监控系统状态
 - 🧠 **自动学习改进** - 从每次错误中学习
 - 🔧 **自动修复问题** - 安全问题自动修复
 - 💾 **自动积累知识** - 知识永久存储
 - 🛡️ **自动预防未来** - L7配置验证层
+- 📊 **自动分析模式** - 识别重复错误模式 ⭐ v2.0新增
+- 📝 **自动生成报告** - 完整的进化报告 ⭐ v2.0新增
 
 ---
 
-## ✨ 核心特性
+## ✨ v2.0 新特性
 
-### 🚀 完全自动化
+### 🎯 错误模式分析
+- 自动分析历史错误
+- 识别重复模式
+- 提取根本原因
+- 生成改进建议
+
+### 📝 自动错误记录
+- 检测最近10分钟错误
+- 自动记录到文件
+- 准备PAI分析
+
+### 📊 增强进化报告
+- 系统状态概览
+- 最佳实践总结
+- 待办事项清单
+- 完整的进化历程
+
+### 🔧 L7配置验证增强
+- API Key格式验证
+- Provider配置检查
+- 自动修复建议
+
+---
+
+## 🚀 核心特性
+
+### 完全自动化
 - 每次心跳自动运行，无需人工干预
-- 6步完整进化流程
+- 8步完整进化流程（v1.0: 6步）
 - 零配置，开箱即用
 
-### 🔄 协同进化
-- 4个独立系统协同工作
+### 协同进化
+- 5个独立系统协同工作（v1.0: 4个）
 - 数据在系统间自由流动
-- 1+1+1+1 > 4 的效果
+- 1+1+1+1+1 > 5 的效果
 
-### 🛡️ 预防为主
+### 预防为主
 - L7 配置验证层预防配置错误
 - 6层防护系统实时监控
 - 问题发生前就预防
 
-### 🧠 持续学习
+### 持续学习
 - 从每次错误中学习
 - 积累最佳实践
 - 生成进化报告
+- 分析错误模式 ⭐ v2.0
 
-### 🔧 自我修复
+### 自我修复
 - 安全错误自动修复
 - 配置问题自动纠正
 - 系统自动恢复
 
 ---
 
-## 🚀 快速开始（5分钟）
+## 📦 安装
 
-### 安装
+### 快速安装
 
 ```bash
-# 1. 克隆仓库
+# 下载脚本
+wget https://raw.githubusercontent.com/63847051/self-evolution-system/main/self-evolution-system.sh
+
+# 添加执行权限
+chmod +x self-evolution-system.sh
+
+# 运行
+./self-evolution-system.sh
+```
+
+### 完整安装
+
+```bash
+# 克隆仓库
 git clone https://github.com/63847051/self-evolution-system.git
 cd self-evolution-system
 
-# 2. 复制脚本到工作区
-cp self-evolution-system.sh ~/.openclaw/workspace/scripts/
-cp l7-config-validation.sh ~/.openclaw/workspace/scripts/
+# 复制脚本
+cp self-evolution-system.sh /root/.openclaw/workspace/scripts/
+cp l7-config-validation.sh /root/.openclaw/workspace/scripts/
+cp analyze-error-patterns.sh /root/.openclaw/workspace/scripts/
 
-# 3. 添加执行权限
-chmod +x ~/.openclaw/workspace/scripts/self-evolution-system.sh
-chmod +x ~/.openclaw/workspace/scripts/l7-config-validation.sh
+# 添加执行权限
+chmod +x /root/.openclaw/workspace/scripts/*.sh
 
-# 4. 更新心跳配置
-cat >> ~/.openclaw/workspace/HEARTBEAT.md << 'EOF'
+# 运行
+bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
+```
 
+---
+
+## 🔧 使用方法
+
+### 1. 手动运行
+
+```bash
+bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
+```
+
+### 2. 添加到心跳
+
+在 `HEARTBEAT.md` 中添加：
+
+```markdown
 ## 🧬 自我进化系统
 
-bash ~/.openclaw/workspace/scripts/self-evolution-system.sh
-EOF
-
-# 5. 测试
-bash ~/.openclaw/workspace/scripts/self-evolution-system.sh
+每次心跳时自动执行：
+```bash
+bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
+```
 ```
 
-### 验证
+### 3. 定时运行
 
 ```bash
-# 运行系统
-bash ~/.openclaw/workspace/scripts/self-evolution-system.sh
+# 添加到 crontab
+crontab -e
 
-# 预期输出：
-# 🧬 自我进化系统启动...
-# ✅ L7验证通过
-# ✅ 防护系统正常
-# ✅ PAI学习完成
-# ✅ SES进化完成
-# ✅ memu记忆已存储
-# 我变得更强了！🧬
+# 每小时运行一次
+0 * * * * bash /root/.openclaw/workspace/scripts/self-evolution-system.sh
 ```
 
 ---
 
-## 🎯 工作原理
+## 📋 进化流程
+
+### v2.0 完整流程（8步）
 
 ```
-心跳触发（每30分钟）
-    ↓
-【L7配置验证】预防配置错误
-    ↓
-【6层防护系统】检测异常
-    ↓
-【PAI学习系统】深度分析
-    ↓
-【超级大脑】进化决策
-    ↓
-【memu-engine】知识存储
-    ↓
-我变得更强！🧬
-```
+1️⃣ L7配置验证
+   └─ 预防配置错误
 
----
+2️⃣ 6层防护检测
+   └─ 保护系统运行
 
-## 📖 文档
+3️⃣ 检查最近错误 ⭐新增
+   └─ 自动记录错误
 
-- [完整部署指南](docs/deploy-guide.md) - 详细部署说明
-- [系统架构说明](docs/architecture.md) - 架构设计
-- [数据采集模块](docs/scrapling-integration.md) - Scrapling集成
-- [安全技能审核](docs/skill-vetting-integration.md) - Trail of Bits审核标准
-- [API 文档](docs/api.md) - API参考
-- [示例代码](examples/) - 使用示例
+4️⃣ PAI深度学习
+   └─ 分析错误模式
 
----
+5️⃣ 超级大脑进化
+   └─ 决策改进方案
 
-## 🛠️ 高级用法
+6️⃣ 错误模式分析 ⭐新增
+   └─ 提取最佳实践
 
-### 自定义配置
+7️⃣ memu-engine存储
+   └─ 永久保存知识
 
-```bash
-# 编辑心跳频率
-# ~/.openclaw/workspace/openclaw.json
-{
-  "agents": {
-    "defaults": {
-      "heartbeat": {
-        "every": "15m"  // 改为15分钟
-      }
-    }
-  }
-}
-```
-
-### 查看日志
-
-```bash
-# 查看进化日志
-cat ~/.openclaw/workspace/.evolution/evolution.log
-
-# 查看学习记录
-ls -la ~/.openclaw/workspace/.learnings/
-
-# 查看进化报告
-cat ~/.openclaw/workspace/.learnings/evolution_report_*.md
+8️⃣ 生成进化报告 ⭐新增
+   └─ 总结进化成果
 ```
 
 ---
 
-## 🤝 贡献
+## 📚 文档
 
-欢迎贡献！请查看 [贡献指南](CONTRIBUTING.md)
+- [部署指南](docs/deploy-guide.md)
+- [架构说明](docs/architecture.md)
+- [工作流程优化](docs/workflow-optimization.md) ⭐ v2.0新增
+- [错误模式分析](docs/error-pattern-analysis.md) ⭐ v2.0新增
+- [使用示例](examples/usage-examples.md)
+
+---
+
+## 🆕 v2.0 更新内容
+
+### 新增功能
+- ✅ 错误模式分析（步骤6）
+- ✅ 自动错误记录（步骤3）
+- ✅ 增强进化报告（步骤8）
+
+### 改进功能
+- ✅ L7配置验证（v1.1）
+- ✅ 错误检测增强
+- ✅ PAI学习改进
+
+### 新增文档
+- ✅ 工作流程优化指南
+- ✅ 错误模式分析报告
+- ✅ 最佳实践文档
+
+### 性能提升
+- 📈 功能增加：6步 → 8步（+33%）
+- 📈 代码增加：5.4KB → 8.4KB（+55%）
+- 📈 智能提升：检测 → 分析
+
+---
+
+## 🔗 相关项目
+
+- [OpenClaw](https://github.com/openclaw/openclaw) - AI Agent框架
+- [memu-engine](https://github.com/yourusername/memu-engine) - 记忆引擎
+- [PAI Learning](https://github.com/yourusername/pai-learning) - 学习系统
 
 ---
 
 ## 📄 许可证
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+MIT License - 详见 [LICENSE](LICENSE)
 
 ---
 
-## 🌟 展望
+## 🤝 贡献
 
-### v1.0 (当前)
-- ✅ 4个系统整合
-- ✅ L7配置验证
-- ✅ 自动进化流程
-
-### v2.0 (计划中)
-- ⏳ Web监控面板
-- ⏳ 更多修复规则
-- ⏳ 跨服务器同步
-
-### v3.0 (愿景)
-- ⏳ 自主进化
-- ⏳ 自动发布进化资产
-- ⏳ 多Agent协作
+欢迎提交 Issue 和 Pull Request！
 
 ---
 
-## 📞 支持
+## 📮 联系方式
 
-- 问题反馈: [GitHub Issues](https://github.com/63847051/self-evolution-system/issues)
-- 讨论交流: [GitHub Discussions](https://github.com/63847051/self-evolution-system/discussions)
+- GitHub: [@63847051](https://github.com/63847051)
+- Email: your@email.com
 
 ---
 
-**让您的 Agent 持续进化，变得更强！** 🧬✨
+## 🌟 Star History
 
-Made with ❤️ by OpenClaw Community
+如果这个项目对您有帮助，请给个 Star ⭐
+
+---
+
+**v2.0 - 让AI Agent真正实现自我进化！** 🧬✨
