@@ -1,0 +1,34 @@
+{
+  "integration": {
+    "name": "multi-agent-parallel-system",
+    "version": "1.0",
+    "enabled": true,
+    "handler": "/root/.openclaw/workspace/scripts/group-chat-mention-handler.sh",
+    "triggers": {
+      "mentions": ["@大领导", "@设计", "@技术", "@小蓝"],
+      "chatTypes": ["group"]
+    },
+    "agents": {
+      "orchestrator": {
+        "name": "大领导",
+        "triggers": ["@大领导"],
+        "model": "glmcode/glm-4.7"
+      },
+      "design-expert": {
+        "name": "设计专家",
+        "triggers": ["@设计"],
+        "model": "glmcode/glm-4.7"
+      },
+      "tech-expert": {
+        "name": "技术专家",
+        "triggers": ["@技术"],
+        "model": "openrouter/gpt-oss-120b"
+      },
+      "xiaolan": {
+        "name": "小蓝",
+        "triggers": ["@小蓝"],
+        "model": "glmcode/glm-4.5-air"
+      }
+    }
+  }
+}
